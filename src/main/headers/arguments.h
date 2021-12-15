@@ -8,7 +8,8 @@
 enum ValidArguments {
     china,		// china mode
     nuke,		// deletes all files
-	help	
+	help,
+	debug	
 };
 
 class ArgumentParser
