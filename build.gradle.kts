@@ -11,4 +11,7 @@ application {
 
 tasks.withType(CppCompile::class.java).configureEach {
     compilerArgs.add("-DSPDLOG_HEADER_ONLY") // spdlog dependency
+    compilerArgs.add("-DASIO_STANDALONE") // asio dependency
+    compilerArgs.add("-std=c++17")
+    compilerArgs.add("-pthread")
 }

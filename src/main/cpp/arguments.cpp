@@ -11,7 +11,7 @@ ArgumentParser::~ArgumentParser() {}
 
 void ArgumentParser::parse_arguments(char *args[]) 
 {
-
+    // hacky switch on string
     std::map<std::string, ValidArguments> valid_args = {
         {"-china", china},
         {"-nuke", nuke},
@@ -29,7 +29,7 @@ void ArgumentParser::parse_arguments(char *args[])
 
             case 0:
                 // enable china mode
-                spdlog::info("冰淇淋");
+                spdlog::info("冰淇淋 mode enabled.");
                 break;
             case 1:
                 // nuke files
@@ -52,8 +52,5 @@ void ArgumentParser::parse_arguments(char *args[])
     } else {
         std::cout << "try running valk -help" << "\n";
     }
-    // if (std::string(args[1]) == "-china") {
-    //     std::cout << "冰淇淋" << "\n";
-    // }
     
 }
