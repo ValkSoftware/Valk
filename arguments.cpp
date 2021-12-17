@@ -29,7 +29,7 @@ void ArgumentParser::parse_arguments(char *args[])
 
             case 0:
                 // enable china mode
-                spdlog::info("冰淇淋 mode enabled.");
+                spdlog::info("冰淇淋 mode enabled");
                 break;
             case 1:
                 // nuke files

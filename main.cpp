@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
 #include <spdlog/spdlog.h>
-#include <pthread.h>
+
 #include <evpp/tcp_server.h>
 #include <evpp/buffer.h>
 #include <evpp/tcp_conn.h>
 
-#include "server.h"
+#include "server/server.h"
 #include "arguments.h"
 
 int main(int argc, char *argv[]) 
@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
         }
     });
 
-    server.Init();
-    server.Start();
-    loop.Run();
-
+    if (server.Init() && server.Start())
+    {
+        loop.Run();
+    }
     return 0;
 }
