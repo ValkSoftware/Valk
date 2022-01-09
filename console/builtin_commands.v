@@ -5,7 +5,7 @@ import util
 fn console_about(args []string) bool {
 	logger.info('-------')
 	logger.info(' valk')
-	logger.info(' https://github.com/Valksoteric/valk')
+	logger.info(' https://github.com/ValkSoftware/Valk')
 	logger.info('-------')
 	return true
 }

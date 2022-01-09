@@ -12,7 +12,7 @@ pub const (
 
 pub fn check_update(mut logger log.Log) (bool, string) {
  
-	resp := json2.raw_decode(http.get_text('https://api.github.com/repos/valksoteric/valk/releases/latest')) or { 
+	resp := json2.raw_decode(http.get_text('https://api.github.com/repos/ValkSoftware/Valk/releases/latest')) or { 
 		logger.warn('could not pull version info! below info might not be true')
 		return true, server_build
 	}
