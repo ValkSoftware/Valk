@@ -11,5 +11,5 @@ pub const (
 )
 
 pub fn setup_file_structure() bool {
-	return setup_config()
+	return setup_config() || license()
 }
