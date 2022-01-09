@@ -1,0 +1,24 @@
+module tests
+
+import nbt
+
+fn test_read_short() {
+	mut nr := nbt.create_nbt_reader([byte(0x00), 0x09, 0x73, 0x68, 0x6f, 0x72, 0x74, 0x54, 0x65, 0x73, 0x74, 0x7f, 0xff])
+	tag_short := nr.read_tag_short()
+	assert tag_short.name == 'shortTest'
+	assert tag_short.data == 32767
+}
+
+fn test_read_byte() {
+	mut nr := nbt.create_nbt_reader([byte(0x00), 0x08, 0x62, 0x79, 0x74, 0x65, 0x54, 0x65, 0x73, 0x74, 0x7f])
+	tag_byte := nr.read_tag_byte()
+	assert tag_byte.name == 'byteTest'
+	assert tag_byte.data == 127
+}
+
+fn test_read_byte_array() {
+	mut nr := nbt.create_nbt_reader([byte(0x00), 0x08, 0x62, 0x79, 0x74, 0x65, 0x54, 0x65, 0x73, 0x74, 0x00, 0x00, 0x00, 0x02, 0x01, 0x02])
+	tag_byte_arr := nr.read_tag_byte_array()
+	assert tag_byte_arr.name == 'byteTest'
+	assert tag_byte_arr.data == [i8(0x01), 0x02]
+}

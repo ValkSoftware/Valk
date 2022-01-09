@@ -1,9 +1,5 @@
-# Valk
-Valk Minecraft server
+# valk
 
-# Contributing
-We are looking for contributors.
-Valk Software loosely follows the Standard Linux coding Guidelines: https://github.com/torvalds/linux/blob/master/Documentation/process/coding-style.rst
+very experimental non-prod minecraft server **pre-alpha** 
 
-# Community
-We have a [Discord guild](https://discord.gg/PGBZkujSsF) where our development related channels are located.
+### we have a [discord](https://discord.gg/CPJDDbVbrK)

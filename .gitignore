@@ -1,4 +1,4 @@
+*.exe
 valk
-.gradle
-gradle
-build
+vls.log
+output
