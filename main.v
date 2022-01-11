@@ -17,7 +17,7 @@ fn main() {
 	println('  █   █    Eagle-eyed perfection.')
 	println(' ██ █ ██')
 	println('  █   █    © 2021-2022 Valk Software')
-	println('  ██ ██    This program is licensed under the AGPL license.')
+	println('  ██ ██    This program is licensed under the AGPLv3 license.')
 	println('   █ █     A copy of it should have come with this release.')
 	println('-------------------------------------------')
 	
