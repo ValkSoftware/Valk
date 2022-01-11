@@ -2,6 +2,7 @@ module main
 
 import log
 
+import util
 import runner
 
 __global logger = log.Log{
@@ -10,17 +11,9 @@ __global logger = log.Log{
 	}
 
 fn main() {
-
-	println('-------------------------------------------')
-	println('   █ █')
-	println('  ██ ██    Valk Software\'s valk.')
-	println('  █   █    Eagle-eyed perfection.')
-	println(' ██ █ ██')
-	println('  █   █    © 2021-2022 Valk Software')
-	println('  ██ ██    This program is licensed under the AGPLv3 license.')
-	println('   █ █     A copy of it should have come with this release.')
-	println('-------------------------------------------')
 	
+	util.parse_args()
+
 	runner.start()
 
 	logger.info('exiting, BYE!')
