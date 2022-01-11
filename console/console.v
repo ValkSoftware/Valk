@@ -4,11 +4,12 @@ import command
 import readline
 
 pub fn console_setup() {
-	command.register_command('stop', console_exit)
+	command.register_command('stop', command.console_exit)
 	command.register_command_alias('stop', 'exit')
-	command.register_command('about', console_about)
-	command.register_command('version', console_version)
-	command.register_command('uptime', console_get_uptime)
+	command.register_command('about', command.console_about)
+	command.register_command('version', command.console_version)
+	command.register_command('uptime', command.console_get_uptime)
+	command.register_command('help', command.console_help)
 	console_read()
 }
 

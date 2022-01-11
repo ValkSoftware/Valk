@@ -1,4 +1,4 @@
-module console
+module command
 
 import util
 
@@ -28,5 +28,10 @@ fn console_get_uptime(args []string) bool {
 	else if uptim3.minutes() < 60{ logger.info('valk has been running for ${byte(uptim3.minutes())} mins') } 
 	else { logger.info('valk has been running for ${i64(uptim3.hours())} hrs') }
 
+	return true
+}
+
+fn console_help(args []string) bool {
+	logger.info('everything is documented on the valk wiki.')
 	return true
 }
