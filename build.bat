@@ -32,7 +32,7 @@ EXIT /B 0
 if not exist .\output (
     mkdir output
 )
-v -cc gcc -o .\output\valk -os windows -prod -gc boehm -show-timings -enable-globals . 
+v -cc gcc -o .\output\valk -os windows -prod -gc boehm -show-timings -enable-globals -skip-unused . 
 EXIT /B 0
 
 :build 
