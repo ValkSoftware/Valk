@@ -12,13 +12,13 @@ __global logger = log.Log{
 fn main() {
 
 	println('-------------------------------------------')
-	println('   █   █')
-	println('  ██   ██    Valk Software\'s valk.')
-	println('  █     █    Eagle-eyed perfection.')
-	println(' ██  █  ██')
-	println('  █     █    © 2021-2022 Valk Software')
-	println('  ██   ██    This program is licensed under the AGPL license.')
-	println('   █   █     A copy of it should have come with this release.')
+	println('   █ █')
+	println('  ██ ██    Valk Software\'s valk.')
+	println('  █   █    Eagle-eyed perfection.')
+	println(' ██ █ ██')
+	println('  █   █    © 2021-2022 Valk Software')
+	println('  ██ ██    This program is licensed under the AGPL license.')
+	println('   █ █     A copy of it should have come with this release.')
 	println('-------------------------------------------')
 	
 	runner.start()
