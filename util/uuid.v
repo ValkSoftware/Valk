@@ -25,8 +25,8 @@ const (
 	]
 )
 
-pub fn uuid_v4_as_bytes(uuid string) []byte {
-	mut buf := []byte{len: 16}
+pub fn uuid_v4_as_bytes(uuid string) []u8 {
+	mut buf := []u8{len: 16}
 	for i, x in [0, 2, 4, 6, 9, 11, 14, 16, 19, 21, 24, 26, 28, 30, 32, 34] {
 		buf[i] = ( xvalues[uuid[x]] << 4 ) | xvalues[uuid[x+1]]
 	}

@@ -16,7 +16,7 @@ pub fn license() bool {
 		os.create(license_path) or { panic('could not write LICENSE file') }
 		resp := http.get('https://api.github.com/licenses/agpl-3.0') or { panic('could not make HTTP request to the GitHub API, check your firewall.') }
 
-		resp_json := json2.raw_decode(resp.text) or { panic('failed to decode api response') }
+		resp_json := json2.raw_decode(resp.body) or { panic('failed to decode api response') }
 
 		mapped_resp := resp_json.as_map()
 		license := mapped_resp['body'] or { panic('no valid field found in GitHub\'s API response while getting license info')}

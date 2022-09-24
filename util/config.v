@@ -32,7 +32,7 @@ pub fn get_config() toml.Doc {
 	$if windows { conf = os.read_file('${root_folder_win}config.toml') or { panic('failed to load config') } } 
 	$else { conf = os.read_file('${root_folder_nix}config.toml') or { panic('failed to load config') } }
 	
-	return toml.parse(conf) or { panic('failed to decode config, check if you\'ve not accidentally made a typo!') }
+	return toml.parse_text(conf) or { panic('failed to decode config, check if you\'ve not accidentally made a typo!') }
 }
 
 fn setup_config() bool {

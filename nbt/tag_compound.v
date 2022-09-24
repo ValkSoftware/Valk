@@ -8,8 +8,6 @@ pub struct TagCompound {
 pub fn (mut n NBTReader) read_tag_compound() TagCompound {
 
 	compound_name := n.read_string()
-	
-	
 
 	return TagCompound{compound_name}
 }

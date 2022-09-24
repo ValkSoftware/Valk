@@ -24,8 +24,8 @@ fn console_version(args []string) bool {
 
 fn console_get_uptime(args []string) bool {
 	uptim3 := uptime.elapsed()
-	if uptim3.seconds() < 60 { logger.info('valk has been running for ${byte(uptim3.seconds())} secs') } 
-	else if uptim3.minutes() < 60{ logger.info('valk has been running for ${byte(uptim3.minutes())} mins') } 
+	if uptim3.seconds() < 60 { logger.info('valk has been running for ${u8(uptim3.seconds())} secs') } 
+	else if uptim3.minutes() < 60{ logger.info('valk has been running for ${u8(uptim3.minutes())} mins') } 
 	else { logger.info('valk has been running for ${i64(uptim3.hours())} hrs') }
 
 	return true

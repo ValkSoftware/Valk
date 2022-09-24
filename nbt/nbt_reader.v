@@ -7,10 +7,11 @@ pub struct NBTReader {
 pub mut:
 	index	int
 	length	int
-	data	[]byte
+	data	[]u8
 }
 
-pub fn create_nbt_reader(data []byte) NBTReader {
+[inline]
+pub fn create_nbt_reader(data []u8) NBTReader {
 	return NBTReader {
 		0
 		data.len
@@ -18,7 +19,8 @@ pub fn create_nbt_reader(data []byte) NBTReader {
 	}
 }
 
-pub fn (mut n NBTReader) read_ubyte() byte {
+[inline]
+pub fn (mut n NBTReader) read_ubyte() u8 {
     if n.check_end_with_offset(1) { return 9 } // 9 = nein
     b := n.data[n.index]
     n.seek(1) or { panic('somehow the packet managed to slip past 2 checks') }
@@ -70,6 +72,7 @@ pub fn (mut n NBTReader) read_long_array(len int) []i64 {
     return tmp
 }
 
+[inline]
 pub fn (mut n NBTReader) read_string() string {
 	if n.check_end() { return '' }
 	
